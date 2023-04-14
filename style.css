@@ -1,0 +1,50 @@
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+}
+.mynav{
+    min-width: 17rem;
+    width: 17rem;
+    position: fixed;
+    height: 100vh;
+    /* box-shadow: 3px 3px 10px rgba( 0, 0, 0, 0.1); */
+    transition: all 0.4s;
+}.mynav a:hover {
+  background-color: aqua;
+  font-size: larger;
+  }
+  .page-content{
+    width: calc(100%);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+  #sidebar.active{
+    margin-left: -17rem;
+  }
+#content.active{
+    width: 100%;
+    margin: 0;
+}
+#sidebarcollapse:hover{
+  background-color: aqua;
+}
+@media (max-width: 786px) {
+  #sidebar{
+    margin-left: -17rem;
+  }
+  #sidebar.active{
+    margin-left: 0;
+  }
+  #content{
+    width: 100%;
+    margin: 0;
+
+  }
+  #content.active{
+    margin-left: 17rem;
+    width: calc(100%-17rem);
+  }
+  
+}

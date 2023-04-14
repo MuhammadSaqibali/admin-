@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"
+    />
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/578dddebbe.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="d-flex">
+      <div class="vertical-nav min-vh-100">
+        <div class="bg-dark mynav p-2" id="sidebar">
+         <img src="smartHome.png" alt=""
+          /></a>
+
+          <div id="sidebar" class="d-flex justify-content-between">
+            <h6
+              href="#"
+              class="text-white d-flex mt-3 align-items-center text-decoration-none"
+            >
+              <span class="fs-6 d-none d-sm-inline"><b>Navigation</b> </span>
+            </h6>
+          </div>
+          <ul id="sidebar" class="nav nav-pills flex-column mt-3">
+            <li class="nav-item py-2 py-sm-0">
+              <a href="index.html" class="nav-link text-white">
+                <span>
+                  <i class="fs-6 fa-solid fa-gauge-simple-high pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0 mask">
+              <a href="statistics.html" class="nav-link text-white">
+                <span>
+                  <i class="fa-solid fa-chart-simple fs-6 me-1 pe-2"></i>
+                </span>
+                <span class="fs-5 d-none d-sm-inline">Statastics</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="result.html" class="nav-link text-white">
+                <span
+                  ><i
+                    class="fa-solid fa-square-poll-horizontal fs-6 me-1 pe-2"
+                  ></i></span
+                ><span class="fs-5 d-none d-sm-inline">Result</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="form.html" class="nav-link text-white">
+                <span><i class="fs-6 me-1 fa-solid fa-list pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Form Element</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="Table.html" class="nav-link text-white">
+                <span>
+                  <i class="fs-6 me-1 fa-solid fa-table-list pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Table</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="chart.html" class="nav-link text-white"
+                ><span>
+                  <i class="fa-solid fa-chart-pie fs-6 me-1 pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Charts</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-content p-0" id="content">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <button id="sidebarcollapse" class="rounded  bg-dark text-white" type="button">
+            <i class="fa fa-bars mr-2"></i>
+          </button>
+          <a href="index.html" class="navbar-brand rounded text-white"
+          >
+          <style>
+            .navbar a:hover{
+                background-color: aqua;
+            }
+          </style>
+          <h3 class="text-white ms-4">smartHome</h3></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-5 w-100" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <ul
+              class="navbar-nav w-100 d-inline-block text-end align-items-end"
+            >
+             
+              <li class="nav-item d-inline-block">
+                <a href="result.html" class="nav-link rounded">Products</a>
+              </li>
+            </ul>
+            <div class="text-white d-flex">
+                <div>
+                  <img
+                    src="bill-gates 1.png"
+                    alt=""
+                    class="ms-2"
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div>
+                  <a class="text-decoration-none text-white" href="user.html"><p class="fs-5 mt-1 ms-2" style="width: 90px">Bill Gates</p></a>
+                </div>
+              </div>
+          </div>
+        </nav>
+        <canvas id="statistics-chart"></canvas>
+
+        
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <!-- <script>
+$(document).ready(function () {
+  $(".navbar-toggler").on("click", function () {
+    $("body").toggleClass("open");
+  });
+});
+</script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="path/to/statistics-chart.js"></script>
+
+    <script>
+        var ctx = document.getElementById("statistics-chart");
+
+var statisticsChart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+      {
+        label: "Sales",
+        backgroundColor: "#28a745",
+        borderColor: "#28a745",
+        borderWidth: 1,
+        data: [1000, 2000, 1500, 3000, 2500, 4000],
+      },
+      {
+        label: "Expenses",
+        backgroundColor: "#dc3545",
+        borderColor: "#dc3545",
+        borderWidth: 1,
+        data: [800, 1500, 1200, 2000, 1800, 2500],
+      },
+    ],
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+    legend: {
+      display: true,
+    },
+  },
+});
+
+
+
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Green", "Yellow", "Red"],
+          datasets: [
+            {
+              backgroundColor: ["#4CAF50", "#FFEB3B", "#F44336"],
+              data: [50, 30, 20],
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: true,
+            text: "My Donut Chart with 3 Colors",
+            fontSize: 20,
+            fontColor: "#333",
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+              fontColor: "#333",
+              fontSize: 14,
+            },
+          },
+        },
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#sidebarcollapse").on("click", function () {
+          $("#sidebar, #content").toggleClass("active");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>

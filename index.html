@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"
+    />
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/578dddebbe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="d-flex">
+      <div class="vertical-nav min-vh-100">
+        <div class="bg-dark mynav p-2" id="sidebar">
+          <img src="smartHome.png" alt="" />
+
+          <div id="sidebar" class="d-flex justify-content-between">
+            <h6
+              href="#"
+              class="text-white d-flex mt-3 align-items-center text-decoration-none"
+            >
+              <span class="fs-5 mt-5 d-none d-sm-inline"
+                ><b>Navigation</b>
+              </span>
+            </h6>
+          </div>
+          <ul id="sidebar" class="nav nav-pills flex-column mt-3">
+            <li class="nav-item py-2 py-sm-0">
+              <a href="index.html" class="nav-link text-white">
+                <span>
+                  <i class="fs-6 fa-solid fa-gauge-simple-high pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0 mask">
+              <a href="statistics.html" class="nav-link text-white">
+                <span>
+                  <i class="fa-solid fa-chart-simple fs-6 me-1 pe-2"></i>
+                </span>
+                <span class="fs-5 d-none d-sm-inline">Statastics</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="result.html" class="nav-link text-white">
+                <span
+                  ><i
+                    class="fa-solid fa-square-poll-horizontal fs-6 me-1 pe-2"
+                  ></i></span
+                ><span class="fs-5 d-none d-sm-inline">Result</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="form.html" class="nav-link text-white">
+                <span><i class="fs-6 me-1 fa-solid fa-list pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Form Element</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="Table.html" class="nav-link text-white">
+                <span>
+                  <i class="fs-6 me-1 fa-solid fa-table-list pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Table</span>
+              </a>
+            </li>
+            <li class="nav-item py-2 py-sm-0">
+              <a href="chart.html" class="nav-link text-white"
+                ><span>
+                  <i class="fa-solid fa-chart-pie fs-6 me-1 pe-2"></i></span
+                ><span class="fs-5 d-none d-sm-inline">Charts</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-content p-0" id="content">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <button
+            id="sidebarcollapse"
+            class="rounded bg-dark text-white"
+            type="button"
+          >
+            <i class="fa fa-bars mr-2"></i>
+          </button>
+          <a href="index.html" class="navbar-brand rounded text-white">
+            <style>
+              .navbar a:hover {
+                background-color: aqua;
+              }
+            </style>
+            <h3 class="text-white ms-4">smartHome</h3></a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-5 w-100" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <ul
+              class="navbar-nav w-100 d-inline-block text-end align-items-end"
+            >
+              <!-- <li class="nav-item d-inline-block">
+                <a href="user.html" class="nav-link rounded actice">Users</a>
+              </li> -->
+
+              <li class="nav-item d-inline-block">
+                <a href="result.html" class="nav-link me-3 rounded">Products</a>
+              </li>
+            </ul>
+            <div class="text-white d-flex">
+              <div>
+                <img
+                  src="bill-gates 1.png"
+                  alt=""
+                  class="ms-2"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div>
+                <a class="text-decoration-none text-white" href="user.html"><p class="fs-5 mt-1 ms-2" style="width: 90px">Bill Gates</p></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="main-pannel row d-flex mx-0 justify-content-around mt-5">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+              <div
+                class="main-pannel-cards d-flex justify-content-between w-100 rounded bg-dark py-3 px-2"
+              >
+                <div class="content-wrapper">
+                  <h4 class="text-white">
+                    $12.34 <sup class="text-success">+3.5%</sup>
+                  </h4>
+                  <p class="text-white">Potential Growth</p>
+                </div>
+                <div class="img-wrapper">
+                  <img src="Group 17.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div
+                class="main-pannel-cards d-flex justify-content-between w-100 rounded bg-dark py-3 px-2"
+              >
+                <div class="content-wrapper">
+                  <h4 class="text-white">
+                    $17.34 <sup class="text-success">+11%</sup>
+                  </h4>
+                  <p class="text-white">Revenue Current</p>
+                </div>
+                <div class="img-wrapper">
+                  <img src="Group 17.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div
+                class="main-pannel-cards d-flex justify-content-between w-100 rounded bg-dark py-3 px-2"
+              >
+                <div class="content-wrapper">
+                  <h4 class="text-white">
+                    $12.34 <sup class="text-danger">-2.4%</sup>
+                  </h4>
+                  <p class="text-white">Daily Income</p>
+                </div>
+                <div class="img-wrapper">
+                  <img src="Group 18.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div
+                class="main-pannel-cards d-flex justify-content-between w-100 rounded bg-dark py-3 px-2"
+              >
+                <div class="content-wrapper">
+                  <h4 class="text-white">
+                    $31.53 <sup class="text-success">+3.5%</sup>
+                  </h4>
+                  <p class="text-white">Expense Current</p>
+                </div>
+                <div class="img-wrapper">
+                  <img src="Group 17.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-pannel">
+          <div class="container">
+            <div class="row justify-content-around">
+              <div class="col-lg-4 bg-dark text-white mt-3 pt-4 rounded">
+                <h5>Transaction History</h5>
+                <canvas id="myChart"></canvas>
+                <div
+                  class="w-70 bg-info mt-3 mb-3 d-flex justify-content-around"
+                >
+                  <div>
+                    <h6>Transfer to Paypal</h6>
+                    <p>07 Jan 2019, 09:12AM</p>
+                  </div>
+                  <div class="mt-4">
+                    <h6>$236</h6>
+                  </div>
+                </div>
+                <div
+                  class="w-70 bg-info mt-3 mb-3 d-flex justify-content-around"
+                >
+                  <div>
+                    <h6>Transfer to Paypal</h6>
+                    <p>07 Jan 2019, 09:12AM</p>
+                  </div>
+                  <div class="mt-4">
+                    <h6>$236</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7 mt-3 rounded text-white bg-dark">
+                <div class="d-flex justify-content-between mt-4">
+                  <div>
+                    <h5>Open Projects</h5>
+                  </div>
+                  <div>
+                    <p>Your data status</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="media d-flex my-2">
+                    <img
+                      class="align-self-center d-inline-block mr-3"
+                      src="bill-gates 1.png"
+                      alt="Generic placeholder image"
+                    />
+
+                    <div class="media-body px-3">
+                      <h6>Bill Gates</h6>
+                      <p>24 Open Shipping</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p>15 minutes ago</p>
+                    <p>30 tasks, 5 issues</p>
+                  </div>
+                </div>
+                <hr class="mt-0" />
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="media d-flex my-2">
+                    <img
+                      class="align-self-center d-inline-block mr-3"
+                      src="bill-gates 1.png"
+                      alt="Generic placeholder image"
+                    />
+
+                    <div class="media-body px-3">
+                      <h6>Bill Gates</h6>
+                      <p>24 Open Shipping</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p>15 minutes ago</p>
+                    <p>30 tasks, 5 issues</p>
+                  </div>
+                </div>
+                <hr class="mt-0" />
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="media d-flex my-2">
+                    <img
+                      class="align-self-center d-inline-block mr-3"
+                      src="bill-gates 1.png"
+                      alt="Generic placeholder image"
+                    />
+
+                    <div class="media-body px-3">
+                      <h6>Bill Gates</h6>
+                      <p>24 Open Shipping</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p>15 minutes ago</p>
+                    <p>30 tasks, 5 issues</p>
+                  </div>
+                </div>
+                <hr class="mt-0" />
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="media d-flex my-2">
+                    <img
+                      class="align-self-center d-inline-block mr-3"
+                      src="bill-gates 1.png"
+                      alt="Generic placeholder image"
+                    />
+
+                    <div class="media-body px-3">
+                      <h6>Bill Gates</h6>
+                      <p>24 Open Shipping</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p>15 minutes ago</p>
+                    <p>30 tasks, 5 issues</p>
+                  </div>
+                </div>
+                <hr class="mt-0" />
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="media d-flex my-2">
+                    <img
+                      class="align-self-center d-inline-block mr-3"
+                      src="bill-gates 1.png"
+                      alt="Generic placeholder image"
+                    />
+
+                    <div class="media-body px-3">
+                      <h6>Bill Gates</h6>
+                      <p>24 Open Shipping</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p>15 minutes ago</p>
+                    <p>30 tasks, 5 issues</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-3 text-white">
+            <div class="row justify-content-around">
+              <div class="col-lg-3 bg-dark rounded pt-3 ps-4">
+                <h5>Revenue</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h2>$32,123 <sup class="text-success">+3.83</sup></h2>
+                    <p>11.38% since last month</p>
+                  </div>
+                  <div>
+                    <img src="bill-gates 1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 bg-dark rounded pt-3 ps-4">
+                <h5>Sales</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h2>$32,123 <sup class="text-success">+3.83</sup></h2>
+                    <p>11.38% since last month</p>
+                  </div>
+                  <div>
+                    <img src="bill-gates 1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 bg-dark rounded pt-3 ps-4">
+                <h5>Purchase</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h2>$32,123 <sup class="text-danger">-2.83</sup></h2>
+                    <p>11.38% since last month</p>
+                  </div>
+                  <div>
+                    <img src="bill-gates 1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div
+              class="rounded container mx-auto overflow-auto text-white bg-dark mt-4"
+              style="width: 97%"
+            >
+              <h4 class="pt-3 pb-3">Order Status</h4>
+              <table id="example" class="table text-white">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Client Name</th>
+                    <th>Order No.</th>
+                    <th>Product Cost</th>
+                    <th>Project</th>
+                    <th>Payment Method</th>
+                    <th>Start Date</th>
+                    <th>Payment Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Henry Klein</td>
+                    <td>02312</td>
+                    <td>$14,500</td>
+                    <td>Dashboard</td>
+                    <td>Credit Card</td>
+                    <td>04 DEC 2019</td>
+                    <td>
+                      <button class="btn btn-outline-success">Approved</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Estella Bryan</td>
+                    <td>02312</td>
+                    <td>$14,500</td>
+                    <td>Website</td>
+                    <td>Cash on delivered</td>
+                    <td>04 DEC 2019</td>
+                    <td>
+                      <button class="btn btn-outline-warning">
+                        Pending &nbsp;
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Lucy Abbott</td>
+                    <td>02312</td>
+                    <td>$14,500</td>
+                    <td>App design</td>
+                    <td>Credit card</td>
+                    <td>04 DEC 2019</td>
+                    <td>
+                      <button class="btn btn-outline-danger">
+                        Rejected &nbsp;
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Peter Gill</td>
+                    <td>02312</td>
+                    <td>$14,500</td>
+                    <td>Development</td>
+                    <td>Online Payment</td>
+                    <td>04 DEC 2019</td>
+                    <td>
+                      <button class="btn btn-outline-success">Approved</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Sallie Reyes</td>
+                    <td>02312</td>
+                    <td>$14,500</td>
+                    <td>Website</td>
+                    <td>Credit card</td>
+                    <td>04 DEC 2019</td>
+                    <td>
+                      <button class="btn btn-outline-success">Approved</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <!-- <script>
+$(document).ready(function () {
+  $(".navbar-toggler").on("click", function () {
+    $("body").toggleClass("open");
+  });
+});
+</script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Green", "Yellow", "Red"],
+          datasets: [
+            {
+              backgroundColor: ["#4CAF50", "#FFEB3B", "#F44336"],
+              data: [50, 30, 20],
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: true,
+            text: "My Donut Chart with 3 Colors",
+            fontSize: 20,
+            fontColor: "#333",
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+              fontColor: "#333",
+              fontSize: 14,
+            },
+          },
+        },
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#sidebarcollapse").on("click", function () {
+          $("#sidebar, #content").toggleClass("active");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
